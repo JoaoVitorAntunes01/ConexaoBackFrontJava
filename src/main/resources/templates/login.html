@@ -38,25 +38,5 @@
         </form>
       </div>
     </div>
-
-    <script>
-      const campos = [
-        { id: 'email', check: v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()) },
-        { id: 'senha', check: v => v.length >= 6 }
-       ];
-
-       function validarFormulario() {
-        let valido = true;
-
-       campos.forEach(({ id, check }) => {
-        const input = document.getElementById(id);
-        const ok = check(input.value);
-        input.classList.toggle('is-invalid', !ok);
-        if (!ok) valido = false;
-     });
-
-    return valido;
-}
-    </script>
   </body>
 </html>
